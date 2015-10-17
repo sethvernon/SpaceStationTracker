@@ -1,13 +1,15 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6211" systemVersion="14A298i" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="vXZ-lx-hvc">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7706" systemVersion="15A284" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="vXZ-lx-hvc">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6204"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7703"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
         <scene sceneID="ufC-wZ-h7g">
             <objects>
-                <viewController id="vXZ-lx-hvc" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="vXZ-lx-hvc" customClass="ViewController" customModule="SpaceStationTracker" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="jyV-Pf-zRb"/>
                         <viewControllerLayoutGuide type="bottom" id="2fi-mo-0CV"/>
@@ -15,11 +17,83 @@
                     <view key="view" contentMode="scaleToFill" id="kh9-bI-dsS">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="2NO-ZO-fea">
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                                <animations/>
+                                <connections>
+                                    <outlet property="delegate" destination="vXZ-lx-hvc" id="0ta-zF-d0D"/>
+                                </connections>
+                            </mapView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="r4F-VP-0AE">
+                                <rect key="frame" x="255" y="322" width="91" height="21"/>
+                                <animations/>
+                                <color key="backgroundColor" red="0.89602188729999999" green="0.93622257379999996" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="21" id="G4P-Xa-Xtz"/>
+                                    <constraint firstAttribute="width" constant="91" id="nhl-el-aFL"/>
+                                    <constraint firstAttribute="width" secondItem="r4F-VP-0AE" secondAttribute="height" multiplier="13:3" id="uha-IO-5ch"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="IMl-Jr-ODi">
+                                <rect key="frame" x="255" y="351" width="91" height="21"/>
+                                <animations/>
+                                <color key="backgroundColor" red="0.89602188729999999" green="0.93622257379999996" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="91" id="irl-xV-YOx"/>
+                                    <constraint firstAttribute="height" constant="21" id="j1u-Vy-fR6"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="Q2i-wL-NT1">
+                                <rect key="frame" x="7" y="564" width="123" height="29"/>
+                                <animations/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="123" id="1yc-l2-eGx"/>
+                                    <constraint firstAttribute="height" constant="28" id="VYq-aw-y6Z"/>
+                                </constraints>
+                                <segments>
+                                    <segment title="Sat"/>
+                                    <segment title="Map"/>
+                                    <segment title="Hyb"/>
+                                </segments>
+                                <connections>
+                                    <action selector="mapType:" destination="vXZ-lx-hvc" eventType="valueChanged" id="cFi-b2-UJe"/>
+                                </connections>
+                            </segmentedControl>
+                        </subviews>
+                        <animations/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="IMl-Jr-ODi" firstAttribute="trailing" secondItem="r4F-VP-0AE" secondAttribute="trailing" id="2Bv-Kb-TZ7"/>
+                            <constraint firstItem="2NO-ZO-fea" firstAttribute="bottom" secondItem="2fi-mo-0CV" secondAttribute="top" id="4AD-Zh-Acv"/>
+                            <constraint firstItem="2NO-ZO-fea" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leading" id="8Tl-KE-AEi"/>
+                            <constraint firstItem="IMl-Jr-ODi" firstAttribute="top" secondItem="r4F-VP-0AE" secondAttribute="bottom" constant="8" symbolic="YES" id="Gox-n8-Y4w"/>
+                            <constraint firstItem="2fi-mo-0CV" firstAttribute="top" secondItem="IMl-Jr-ODi" secondAttribute="bottom" constant="228" id="KpR-wd-9iI"/>
+                            <constraint firstItem="Q2i-wL-NT1" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leadingMargin" constant="-9" id="LU4-1n-nvh"/>
+                            <constraint firstItem="Q2i-wL-NT1" firstAttribute="top" secondItem="2NO-ZO-fea" secondAttribute="bottom" constant="-36" id="Nl6-ou-E70"/>
+                            <constraint firstItem="IMl-Jr-ODi" firstAttribute="leading" secondItem="r4F-VP-0AE" secondAttribute="leading" id="Nuv-4h-jjv"/>
+                            <constraint firstItem="2NO-ZO-fea" firstAttribute="top" secondItem="kh9-bI-dsS" secondAttribute="top" id="U5h-N7-b7d"/>
+                            <constraint firstAttribute="trailing" secondItem="2NO-ZO-fea" secondAttribute="trailing" id="gDK-B5-l8D"/>
+                            <constraint firstItem="r4F-VP-0AE" firstAttribute="centerX" secondItem="2NO-ZO-fea" secondAttribute="centerX" id="uC6-tV-VSJ"/>
+                        </constraints>
                     </view>
+                    <nil key="simulatedStatusBarMetrics"/>
+                    <connections>
+                        <outlet property="latitudeLabel" destination="r4F-VP-0AE" id="7w6-fH-XsK"/>
+                        <outlet property="longitude" destination="IMl-Jr-ODi" id="6mh-eu-UHh"/>
+                        <outlet property="mapTypeButt" destination="Q2i-wL-NT1" id="hXD-Rk-wyP"/>
+                        <outlet property="mapView" destination="2NO-ZO-fea" id="CBF-Zp-aMF"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="300" y="473"/>
         </scene>
     </scenes>
 </document>

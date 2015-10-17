@@ -7,19 +7,65 @@
 //
 
 import UIKit
+import MapKit
 
-class ViewController: UIViewController {
 
+class ViewController: UIViewController, MKMapViewDelegate  {
+
+    
+    @IBOutlet weak var mapView: MKMapView!
+        {
+        didSet {
+            mapView.delegate = self
+            mapView.mapType = .Satellite
+            
+        }
+    }
+    
+    @IBOutlet weak var latitudeLabel: UILabel!
+    
+    @IBOutlet weak var longitude: UILabel!
+    
+    
+    @IBOutlet weak var mapTypeButt: UISegmentedControl!
+    
+    @IBAction func mapType(sender: UISegmentedControl) {
+        
+        var index = Int()
+        index = mapTypeButt.selectedSegmentIndex
+        
+        switch index {
+            
+        case 0: mapView.mapType = .Satellite
+            
+        case 1: mapView.mapType = .Standard
+            
+        case 2:  mapView.mapType = .Hybrid
+            
+        default: break
+            
+        }
+
+        
+    }
+    
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
+        
+        
+        
     }
-
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
-    }
-
-
+   
+        
+    
+    
+       
+    
+    
+    
+    
+    
 }
 
