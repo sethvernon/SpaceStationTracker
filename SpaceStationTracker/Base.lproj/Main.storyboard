@@ -34,7 +34,7 @@
                                     <constraint firstAttribute="width" constant="91" id="nhl-el-aFL"/>
                                     <constraint firstAttribute="width" secondItem="r4F-VP-0AE" secondAttribute="height" multiplier="13:3" id="uha-IO-5ch"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="12"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
@@ -46,7 +46,7 @@
                                     <constraint firstAttribute="width" constant="91" id="irl-xV-YOx"/>
                                     <constraint firstAttribute="height" constant="21" id="j1u-Vy-fR6"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="12"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
