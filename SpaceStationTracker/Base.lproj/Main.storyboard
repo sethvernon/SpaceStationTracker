@@ -25,29 +25,16 @@
                                     <outlet property="delegate" destination="vXZ-lx-hvc" id="0ta-zF-d0D"/>
                                 </connections>
                             </mapView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="r4F-VP-0AE">
-                                <rect key="frame" x="255" y="322" width="91" height="21"/>
-                                <animations/>
-                                <color key="backgroundColor" red="0.89602188729999999" green="0.93622257379999996" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="21" id="G4P-Xa-Xtz"/>
-                                    <constraint firstAttribute="width" constant="91" id="nhl-el-aFL"/>
-                                    <constraint firstAttribute="width" secondItem="r4F-VP-0AE" secondAttribute="height" multiplier="13:3" id="uha-IO-5ch"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="12"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="IMl-Jr-ODi">
+                            <label opaque="NO" userInteractionEnabled="NO" alpha="0.74999999999999978" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="IMl-Jr-ODi">
                                 <rect key="frame" x="255" y="351" width="91" height="21"/>
                                 <animations/>
-                                <color key="backgroundColor" red="0.89602188729999999" green="0.93622257379999996" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="backgroundColor" red="0.19338701359999999" green="0.19338701359999999" blue="0.19338701359999999" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="91" id="irl-xV-YOx"/>
                                     <constraint firstAttribute="height" constant="21" id="j1u-Vy-fR6"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="12"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="9"/>
+                                <color key="textColor" red="0.3912511004" green="1" blue="0.87246358030000004" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="Q2i-wL-NT1">
@@ -66,6 +53,19 @@
                                     <action selector="mapType:" destination="vXZ-lx-hvc" eventType="valueChanged" id="cFi-b2-UJe"/>
                                 </connections>
                             </segmentedControl>
+                            <label opaque="NO" userInteractionEnabled="NO" alpha="0.74999999999999978" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="r4F-VP-0AE">
+                                <rect key="frame" x="255" y="322" width="91" height="21"/>
+                                <animations/>
+                                <color key="backgroundColor" red="0.19338701359999999" green="0.19338701359999999" blue="0.19338701359999999" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="21" id="G4P-Xa-Xtz"/>
+                                    <constraint firstAttribute="width" constant="91" id="nhl-el-aFL"/>
+                                    <constraint firstAttribute="width" secondItem="r4F-VP-0AE" secondAttribute="height" multiplier="13:3" id="uha-IO-5ch"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="9"/>
+                                <color key="textColor" red="0.3912511004" green="1" blue="0.87246358030000004" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <animations/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>

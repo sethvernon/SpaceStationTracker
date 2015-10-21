@@ -40,6 +40,7 @@ class ViewController: UIViewController, MKMapViewDelegate
             var spaceStationCoordinates = NSDictionary()
             var startCoordinate = CLLocationCoordinate2D()
             var activityIndicator = UIActivityIndicatorView()
+            var mapLoaded = Bool()
     
     
     
@@ -48,6 +49,11 @@ class ViewController: UIViewController, MKMapViewDelegate
         
         activityIndicator.startAnimating()
         loadData()
+        
+        var timer = NSTimer.scheduledTimerWithTimeInterval(5, target: self,
+                                                            selector: "loadData",
+                                                            userInfo: nil,
+                                                             repeats: true)
         
     }
     
@@ -62,7 +68,7 @@ class ViewController: UIViewController, MKMapViewDelegate
     
     
     
-    private func loadData() {
+    func loadData() {
         
         SpaceStationModel.loadJSONDataWithCompletion { (locationDictionary) in
             
@@ -77,6 +83,14 @@ class ViewController: UIViewController, MKMapViewDelegate
             self.customAnnotation.coordinate = CLLocationCoordinate2DMake(currentLatitude, currentLongitude)
             
             self.setupAnnotation()
+            
+//            if self.mapLoaded == false   {
+//                
+//                self.setupAnnotation()
+//                
+//                self.mapLoaded = true
+//            }
+            
 
         }
     }
