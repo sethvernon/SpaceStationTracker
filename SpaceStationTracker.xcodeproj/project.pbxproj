@@ -7,12 +7,16 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		5D62E7DE1BD30F0F00A41B1F /* SpaceStationModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 5D62E7DD1BD30F0F00A41B1F /* SpaceStationModel.m */; };
 		5D9006831BCD3151005EE4FB /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D9006821BCD3151005EE4FB /* AppDelegate.swift */; };
 		5D9006851BCD3151005EE4FB /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D9006841BCD3151005EE4FB /* ViewController.swift */; };
 		5D9006881BCD3151005EE4FB /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5D9006861BCD3151005EE4FB /* Main.storyboard */; };
 		5D90068A1BCD3151005EE4FB /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5D9006891BCD3151005EE4FB /* Images.xcassets */; };
 		5D90068D1BCD3151005EE4FB /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5D90068B1BCD3151005EE4FB /* LaunchScreen.xib */; };
 		5D9006991BCD3152005EE4FB /* SpaceStationTrackerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D9006981BCD3152005EE4FB /* SpaceStationTrackerTests.swift */; };
+		5D9006A51BCD3197005EE4FB /* CustomAnnotation.m in Sources */ = {isa = PBXBuildFile; fileRef = 5D9006A41BCD3197005EE4FB /* CustomAnnotation.m */; };
+		5D9006A71BCD31DA005EE4FB /* SpaceStation_AnnotationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D9006A61BCD31DA005EE4FB /* SpaceStation_AnnotationView.swift */; };
+		5D9006A91BCD31FE005EE4FB /* spaceStation.png in Resources */ = {isa = PBXBuildFile; fileRef = 5D9006A81BCD31FE005EE4FB /* spaceStation.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -26,6 +30,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		5D62E7DC1BD30F0F00A41B1F /* SpaceStationModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SpaceStationModel.h; sourceTree = "<group>"; };
+		5D62E7DD1BD30F0F00A41B1F /* SpaceStationModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SpaceStationModel.m; sourceTree = "<group>"; };
 		5D90067D1BCD3151005EE4FB /* SpaceStationTracker.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SpaceStationTracker.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5D9006811BCD3151005EE4FB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		5D9006821BCD3151005EE4FB /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -36,6 +42,11 @@
 		5D9006921BCD3152005EE4FB /* SpaceStationTrackerTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SpaceStationTrackerTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		5D9006971BCD3152005EE4FB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		5D9006981BCD3152005EE4FB /* SpaceStationTrackerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpaceStationTrackerTests.swift; sourceTree = "<group>"; };
+		5D9006A21BCD3196005EE4FB /* SpaceStationTracker-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "SpaceStationTracker-Bridging-Header.h"; sourceTree = "<group>"; };
+		5D9006A31BCD3197005EE4FB /* CustomAnnotation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CustomAnnotation.h; sourceTree = "<group>"; };
+		5D9006A41BCD3197005EE4FB /* CustomAnnotation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CustomAnnotation.m; sourceTree = "<group>"; };
+		5D9006A61BCD31DA005EE4FB /* SpaceStation_AnnotationView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SpaceStation_AnnotationView.swift; sourceTree = "<group>"; };
+		5D9006A81BCD31FE005EE4FB /* spaceStation.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = spaceStation.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -79,10 +90,17 @@
 			children = (
 				5D9006821BCD3151005EE4FB /* AppDelegate.swift */,
 				5D9006841BCD3151005EE4FB /* ViewController.swift */,
+				5D9006A61BCD31DA005EE4FB /* SpaceStation_AnnotationView.swift */,
+				5D9006A31BCD3197005EE4FB /* CustomAnnotation.h */,
+				5D9006A41BCD3197005EE4FB /* CustomAnnotation.m */,
+				5D9006A81BCD31FE005EE4FB /* spaceStation.png */,
 				5D9006861BCD3151005EE4FB /* Main.storyboard */,
+				5D62E7DC1BD30F0F00A41B1F /* SpaceStationModel.h */,
+				5D62E7DD1BD30F0F00A41B1F /* SpaceStationModel.m */,
 				5D9006891BCD3151005EE4FB /* Images.xcassets */,
 				5D90068B1BCD3151005EE4FB /* LaunchScreen.xib */,
 				5D9006801BCD3151005EE4FB /* Supporting Files */,
+				5D9006A21BCD3196005EE4FB /* SpaceStationTracker-Bridging-Header.h */,
 			);
 			path = SpaceStationTracker;
 			sourceTree = "<group>";
@@ -193,6 +211,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				5D9006881BCD3151005EE4FB /* Main.storyboard in Resources */,
+				5D9006A91BCD31FE005EE4FB /* spaceStation.png in Resources */,
 				5D90068D1BCD3151005EE4FB /* LaunchScreen.xib in Resources */,
 				5D90068A1BCD3151005EE4FB /* Images.xcassets in Resources */,
 			);
@@ -212,6 +231,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5D9006A51BCD3197005EE4FB /* CustomAnnotation.m in Sources */,
+				5D9006A71BCD31DA005EE4FB /* SpaceStation_AnnotationView.swift in Sources */,
+				5D62E7DE1BD30F0F00A41B1F /* SpaceStationModel.m in Sources */,
 				5D9006851BCD3151005EE4FB /* ViewController.swift in Sources */,
 				5D9006831BCD3151005EE4FB /* AppDelegate.swift in Sources */,
 			);
@@ -340,9 +362,13 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				INFOPLIST_FILE = SpaceStationTracker/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.4;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "SpaceStationTracker/SpaceStationTracker-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
 			name = Debug;
 		};
@@ -350,9 +376,12 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				INFOPLIST_FILE = SpaceStationTracker/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.4;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "SpaceStationTracker/SpaceStationTracker-Bridging-Header.h";
 			};
 			name = Release;
 		};
@@ -409,6 +438,7 @@
 				5D90069E1BCD3152005EE4FB /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		5D90069F1BCD3152005EE4FB /* Build configuration list for PBXNativeTarget "SpaceStationTrackerTests" */ = {
 			isa = XCConfigurationList;
@@ -417,6 +447,7 @@
 				5D9006A11BCD3152005EE4FB /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

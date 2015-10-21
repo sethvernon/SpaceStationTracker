@@ -46,18 +46,12 @@ class ViewController: UIViewController, MKMapViewDelegate
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        
         activityIndicator.startAnimating()
-        
-        
         loadData()
         
-
-        
-        setupAnnotation()
-        
-        
     }
+    
+    
     
     func setupAnnotation() {
         
@@ -81,6 +75,9 @@ class ViewController: UIViewController, MKMapViewDelegate
             self.longitude.text = "\(currentLongitude)"
             
             self.customAnnotation.coordinate = CLLocationCoordinate2DMake(currentLatitude, currentLongitude)
+            
+            self.setupAnnotation()
+
         }
     }
     
@@ -88,17 +85,40 @@ class ViewController: UIViewController, MKMapViewDelegate
     
     func mapView(mapView: MKMapView!, viewForAnnotation annotation: MKAnnotation!) -> MKAnnotationView! {
         
-        var annoView = SpaceStation_AnnotationView()
+        let reuseIdentifier = "ISS"
+        var annotationView = mapView.dequeueReusableAnnotationViewWithIdentifier(reuseIdentifier)
         
-        annoView.annotation = annotation
         
-        return annoView
+        if annotation.isKindOfClass(CustomAnnotation) {
+            
+            annotationView = SpaceStation_AnnotationView(annotation: annotation, reuseIdentifier: reuseIdentifier)
+            
+            annotationView.canShowCallout = true
+            customAnnotation.title = "ISS Postion"
+            customAnnotation.subtitle = ""
+
+            
+            annotationView.annotation = annotation
+
+
+            
+        }
         
+        return annotationView
     }
     
     
-    
-    
-    
+
+
 }
+    
+    
+    
+    
+    
+    
+    
+    
+    
+
 
