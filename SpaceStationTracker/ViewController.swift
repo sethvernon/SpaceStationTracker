@@ -41,6 +41,7 @@ class ViewController: UIViewController, MKMapViewDelegate
             var startCoordinate = CLLocationCoordinate2D()
             var activityIndicator = UIActivityIndicatorView()
             var mapLoaded = Bool()
+            var timer = NSTimer()
     
     
     
@@ -50,7 +51,7 @@ class ViewController: UIViewController, MKMapViewDelegate
         activityIndicator.startAnimating()
         loadData()
         
-        var timer = NSTimer.scheduledTimerWithTimeInterval(5, target: self,
+        timer = NSTimer.scheduledTimerWithTimeInterval(5, target: self,
                                                             selector: "loadData",
                                                             userInfo: nil,
                                                              repeats: true)
@@ -74,8 +75,8 @@ class ViewController: UIViewController, MKMapViewDelegate
             
             self.spaceStationCoordinates = locationDictionary as NSDictionary
             
-            var currentLatitude = self.spaceStationCoordinates.valueForKey("latitude")!.doubleValue
-            var currentLongitude = self.spaceStationCoordinates.valueForKey("longitude")!.doubleValue
+            let currentLatitude = self.spaceStationCoordinates.valueForKey("latitude")!.doubleValue
+            let currentLongitude = self.spaceStationCoordinates.valueForKey("longitude")!.doubleValue
             
             self.latitudeLabel.text = "\(currentLatitude)"
             self.longitude.text = "\(currentLongitude)"
@@ -83,21 +84,14 @@ class ViewController: UIViewController, MKMapViewDelegate
             self.customAnnotation.coordinate = CLLocationCoordinate2DMake(currentLatitude, currentLongitude)
             
             self.setupAnnotation()
-            
-//            if self.mapLoaded == false   {
-//                
-//                self.setupAnnotation()
-//                
-//                self.mapLoaded = true
-//            }
-            
 
         }
     }
     
     
     
-    func mapView(mapView: MKMapView!, viewForAnnotation annotation: MKAnnotation!) -> MKAnnotationView! {
+    func mapView(mapView: MKMapView, viewForAnnotation annotation: MKAnnotation) -> MKAnnotationView?
+    {
         
         let reuseIdentifier = "ISS"
         var annotationView = mapView.dequeueReusableAnnotationViewWithIdentifier(reuseIdentifier)
@@ -107,22 +101,16 @@ class ViewController: UIViewController, MKMapViewDelegate
             
             annotationView = SpaceStation_AnnotationView(annotation: annotation, reuseIdentifier: reuseIdentifier)
             
-            annotationView.canShowCallout = true
+            annotationView!.canShowCallout = true
             customAnnotation.title = "ISS Postion"
             customAnnotation.subtitle = ""
 
-            
-            annotationView.annotation = annotation
-
-
+            annotationView!.annotation = annotation
             
         }
         
         return annotationView
     }
-    
-    
-
 
 }
     

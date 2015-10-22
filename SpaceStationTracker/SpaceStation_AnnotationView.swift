@@ -23,7 +23,7 @@ import MapKit
     var delegate:SpaceStation_AnnotationViewDelegate?
 
     
-    override init(annotation:MKAnnotation, reuseIdentifier:String)
+    override init(annotation:MKAnnotation?, reuseIdentifier:String?)
         {
             super.init(annotation: annotation, reuseIdentifier: reuseIdentifier)
             
@@ -39,7 +39,7 @@ import MapKit
                                     super.init(frame: frame)
                             }
     
-                        required init(coder: NSCoder)
+                        required init?(coder: NSCoder)
                             {
                                 fatalError("NSCoding not supprted")
                         }
@@ -53,7 +53,7 @@ import MapKit
                     
                     self.opaque = false
                     
-                    image.drawInRect(self.bounds.rectByInsetting(dx: 5, dy: 5))
+                    image.drawInRect(self.bounds.insetBy(dx: 5, dy: 5))
             }
     
     
